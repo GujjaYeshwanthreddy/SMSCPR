@@ -12,7 +12,7 @@ const Numbers = ({ mainMenuOpen }) => {
         className="flex items-center gap-2 text-base px-2 cursor-pointer justify-between py-2 rounded-md hover:bg-[#005A9C]"
       >
         <div className="flex items-center gap-3 text-white ">
-          <img src="/navbar/hashtag.svg" alt="hashtag" className="w-8 h-8" />
+          <img src="/navbar/hashtag.svg" alt="hashtag" className="w-6 h-6" />
 
           {mainMenuOpen && <span>Numbers</span>}
         </div>
@@ -65,7 +65,7 @@ const Numbers = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/numbers/phone-plus.svg"
-                  alt="phone-plus-logo"
+                  alt="phone-plus-logo" className="w-6 h-6"
                 />
 
                 <span>Virtual Numbers</span>
@@ -83,7 +83,7 @@ const Numbers = ({ mainMenuOpen }) => {
                   }`
                 }
               >
-                <img src="/navbar/numbers/thumbs-up.svg" alt="thumbs-up-logo" />
+                <img src="/navbar/numbers/thumbs-up.svg" alt="thumbs-up-logo" className="w-6 h-6" />
 
                 <span>Subscribed</span>
               </NavLink>

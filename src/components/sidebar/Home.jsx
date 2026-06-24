@@ -13,7 +13,7 @@ const Home = ({ mainMenuOpen }) => {
         }`
       }
     >
-      <img src="/navbar/house.svg" alt="house-logo" className="w-8 h-8" />
+      <img src="/navbar/house.svg" alt="house-logo" className="w-6 h-6" />
 
       {mainMenuOpen && <span>Home</span>}
     </NavLink>

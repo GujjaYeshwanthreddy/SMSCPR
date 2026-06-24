@@ -12,7 +12,7 @@ const Livechat = ({ mainMenuOpen }) => {
         }`
       }
     >
-      <img src="/navbar/comments.svg" alt="livechat-logo" className="w-8 h-7" />
+      <img src="/navbar/comments.svg" alt="livechat-logo" className="w-6 h-6" />
 
       {mainMenuOpen && <span>Live Chat</span>}
     </NavLink>

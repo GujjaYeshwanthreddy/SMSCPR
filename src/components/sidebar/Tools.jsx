@@ -25,7 +25,7 @@ const Tools = ({ mainMenuOpen }) => {
           <img
             src="/navbar/screwdriver-wrench.svg"
             alt="screwdriver-wrench"
-            className="w-8 h-7"
+            className="w-6 h-6"
           />
 
           {mainMenuOpen && <span>Tools</span>}
@@ -79,7 +79,7 @@ const Tools = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/tools/photo-film-music.svg"
-                  alt="media-library"
+                  alt="media-library" className="w-6 h-6"
                 />
                 <span>Media Library</span>
               </NavLink>
@@ -96,7 +96,7 @@ const Tools = ({ mainMenuOpen }) => {
                   }`
                 }
               >
-                <img src="/navbar/tools/link.svg" alt="url-shortener" />
+                <img src="/navbar/tools/link.svg" alt="url-shortener" className="w-6 h-6" />
                 <span>URL Shortener</span>
               </NavLink>
             </li>

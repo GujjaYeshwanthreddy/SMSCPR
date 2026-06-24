@@ -55,7 +55,7 @@ const CampaignsDropdown = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/campaigns/paper-plane.svg"
-                  alt="paper-plane"
+                  alt="paper-plane" className="w-6 h-6"
                 />
                 <span>Send Message</span>
               </NavLink>
@@ -75,7 +75,7 @@ const CampaignsDropdown = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/campaigns/arrows-turn-to-dots.svg"
-                  alt="two-way"
+                  alt="campaigns-logo" className="w-6 h-6"
                 />
                 <span>2-Way Messaging</span>
               </NavLink>
@@ -93,7 +93,7 @@ const CampaignsDropdown = ({ mainMenuOpen }) => {
                   }`
                 }
               >
-                <img src="/navbar/campaigns/sliders.svg" alt="autoresponders" />
+                <img src="/navbar/campaigns/sliders.svg" alt="autoresponders"  className="w-6 h-6"/>
                 <span>Autoresponders</span>
               </NavLink>
             </li>
@@ -112,7 +112,7 @@ const CampaignsDropdown = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/campaigns/calendar-clock.svg"
-                  alt="schedule"
+                  alt="schedule" className="w-6 h-6"
                 />
                 <span>Schedule Campaigns</span>
               </NavLink>

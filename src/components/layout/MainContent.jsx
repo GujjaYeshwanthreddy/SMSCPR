@@ -15,9 +15,9 @@ const MainContent = ({ mainMenuOpen }) => {
   return (
     <div className="flex flex-1">
       <div
-        className={`fixed left-0 top-[60px]
+        className={`fixed left-0 top-[67px]
   bg-[#006EC2] transition-all duration-300 overflow-hidden gap-2
-  ${mainMenuOpen ? "w-[240px]" : "w-[70px]"}
+  ${mainMenuOpen ? "w-[260px]" : "w-[70px]"}
   h-[calc(100vh-67px)]`}
       >
     <div className="flex flex-col justify-between h-full">
@@ -48,7 +48,7 @@ const MainContent = ({ mainMenuOpen }) => {
       <div className="px-4 pb-4">
             {mainMenuOpen && <h1 className="text-base  text-white">Personal</h1>}
 
-            <div className="flex items-start  gap-3 ">
+            <div className="flex items-start  gap-2 ">
               <img
                 src="/navbar/coins.svg"
                 alt="coins-logo"

@@ -12,7 +12,7 @@ const Dashboard = ({ mainMenuOpen }) => {
         }`
       }
     >
-      <img src="/navbar/gauge.svg" alt="dashboard-logo" className="w-8 h-8" />
+      <img src="/navbar/gauge.svg" alt="dashboard-logo" className="w-6 h-6" />
 
       {mainMenuOpen && <span>Dashboard</span>}
     </NavLink>

@@ -15,7 +15,7 @@ const Contacts = ({ mainMenuOpen }) => {
           <img
             src="/navbar/address-book.svg"
             alt="address-logo"
-            className="w-8 h-8"
+            className="w-6 h-6"
           />
 
           {mainMenuOpen && <span>Contacts</span>}
@@ -70,7 +70,7 @@ const Contacts = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/Contacts/users-medical.svg"
-                  alt="users-medical-logo"
+                  alt="users-medical-logo" className="w-6 h-6"
                 />
                 <span>Contact Groups</span>
               </NavLink>
@@ -90,7 +90,7 @@ const Contacts = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/Contacts/layer-group.svg"
-                  alt="layer-group-logo"
+                  alt="layer-group-logo" className="w-6 h-6"
                 />
                 <span>Segments</span>
               </NavLink>
@@ -110,7 +110,7 @@ const Contacts = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/Contacts/list-check.svg"
-                  alt="list-check-logo"
+                  alt="list-check-logo" className="w-6 h-6"
                 />
                 <span>Custom Fields</span>
               </NavLink>
