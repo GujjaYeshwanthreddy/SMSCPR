@@ -28,8 +28,9 @@ import InboxPage from "../Pages/Reports/InboxPage";
 
 import HttpApiPage from "../Pages/Api/HttpApiPage";
 
-import LivechatPage from "../Pages/LiveChat/LiveChatPage";
+
 import CustomFieldsPage from "../Pages/Contacts/CustomFieldsPage";
+import LivechatPage from "../Pages/LiveChat/LivechatPage";
 
 const AppRoutes = ({ mainMenuOpen }) => {
   return (
@@ -89,7 +90,7 @@ const AppRoutes = ({ mainMenuOpen }) => {
 
         <Route path="api/http-api" element={<HttpApiPage />} />
 
-        <Route path="livechat" element={<LivechatPage />} />
+        <Route path="livechat" element={<LivechatPage/>} />
       </Route>
     </Routes>
   );
