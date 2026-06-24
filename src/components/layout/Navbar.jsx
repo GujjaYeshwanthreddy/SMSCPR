@@ -22,17 +22,17 @@ const Navbar = ({ mainMenuOpen, setMainMenuOpen }) => {
           <img
             src="/navbar/globe.svg"
             alt="globe-logo"
-            className="w-9 h-9 "
+            className="w-7 h-7 "
           ></img>
           <img
             src="/navbar/bell.svg"
             alt="bell=logo"
-            className="w-9 h-9"
+            className="w-7 h-7"
           ></img>
           <img
             src="/navbar/circle-user.svg"
             alt="circle-user.logo"
-            className="w-9 h-9"
+            className="w-7 h-7"
           ></img>
         </div>
       </nav>

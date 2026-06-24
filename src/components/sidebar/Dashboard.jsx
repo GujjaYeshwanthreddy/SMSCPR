@@ -6,7 +6,7 @@ const Dashboard = ({ mainMenuOpen }) => {
     <NavLink
       to="/dashboard"
       className={({ isActive }) =>
-        `flex items-center gap-3 text-base px-2 py-2 rounded-md cursor-pointer
+        `flex items-center gap-2 text-base px-2 py-2 rounded-md cursor-pointer
         ${
           isActive ? "bg-[#005A9C] text-white" : "text-white hover:bg-[#005A9C]"
         }`

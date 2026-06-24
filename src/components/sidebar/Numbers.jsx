@@ -9,9 +9,9 @@ const Numbers = ({ mainMenuOpen }) => {
     <>
       <li
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-3 px-2 cursor-pointer justify-between py-2 rounded-md hover:bg-[#005A9C]"
+        className="flex items-center gap-2 text-base px-2 cursor-pointer justify-between py-2 rounded-md hover:bg-[#005A9C]"
       >
-        <div className="flex items-center gap-3 text-white text-base">
+        <div className="flex items-center gap-3 text-white ">
           <img src="/navbar/hashtag.svg" alt="hashtag" className="w-8 h-8" />
 
           {mainMenuOpen && <span>Numbers</span>}

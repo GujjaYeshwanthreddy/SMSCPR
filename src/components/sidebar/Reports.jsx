@@ -9,9 +9,9 @@ const Reports = ({ mainMenuOpen }) => {
     <>
       <li
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-3 px-2 cursor-pointer py-2 justify-between rounded-md hover:bg-[#005A9C]"
+        className="flex items-center gap-3 px-2 cursor-pointer py-2 text-base justify-between rounded-md hover:bg-[#005A9C]"
       >
-        <div className="flex items-center gap-3 text-white text-base">
+        <div className="flex items-center gap-3 text-white ">
           <img
             src="/navbar/file-chart-column.svg"
             alt="file-chart-logo"
