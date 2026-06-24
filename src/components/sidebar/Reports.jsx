@@ -11,7 +11,7 @@ const Reports = ({ mainMenuOpen }) => {
         onClick={() => setOpen(!open)}
         className="flex items-center gap-3 px-2 cursor-pointer py-2 justify-between rounded-md hover:bg-[#005A9C]"
       >
-        <div className="flex items-center gap-3 text-white text-xl">
+        <div className="flex items-center gap-3 text-white text-base">
           <img
             src="/navbar/file-chart-column.svg"
             alt="file-chart-logo"
@@ -43,7 +43,7 @@ const Reports = ({ mainMenuOpen }) => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="overflow-hidden ml-2 mt-2 space-y-2 text-xl text-white"
+            className="overflow-hidden ml-2 mt-2 space-y-1 text-base text-white"
           >
             <li>
               <NavLink

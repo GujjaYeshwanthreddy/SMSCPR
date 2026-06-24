@@ -6,7 +6,7 @@ const Livechat = ({ mainMenuOpen }) => {
     <NavLink
       to="/livechat"
       className={({ isActive }) =>
-        `flex items-center gap-3 cursor-pointer px-2 py-2 text-xl rounded-md
+        `flex items-center gap-3 cursor-pointer px-2 py-2 text-base rounded-md
         ${
           isActive ? "bg-[#005A9C] text-white" : "text-white hover:bg-[#005A9C]"
         }`

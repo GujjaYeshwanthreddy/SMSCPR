@@ -11,7 +11,7 @@ const Numbers = ({ mainMenuOpen }) => {
         onClick={() => setOpen(!open)}
         className="flex items-center gap-3 px-2 cursor-pointer justify-between py-2 rounded-md hover:bg-[#005A9C]"
       >
-        <div className="flex items-center gap-3 text-white text-xl">
+        <div className="flex items-center gap-3 text-white text-base">
           <img src="/navbar/hashtag.svg" alt="hashtag" className="w-8 h-8" />
 
           {mainMenuOpen && <span>Numbers</span>}
@@ -50,7 +50,7 @@ const Numbers = ({ mainMenuOpen }) => {
             transition={{
               duration: 0.3,
             }}
-            className="overflow-hidden ml-2 mt-2 space-y-2 text-xl text-white"
+            className="overflow-hidden ml-2 mt-2 space-y-1 text-base text-white"
           >
             <li>
               <NavLink

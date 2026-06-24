@@ -19,7 +19,7 @@ const Tools = ({ mainMenuOpen }) => {
     <>
       <li
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-3 px-2 text-xl cursor-pointer py-2 justify-between rounded-md hover:bg-[#005A9C]"
+        className="flex items-center gap-3 px-2 text-base cursor-pointer py-2 justify-between rounded-md hover:bg-[#005A9C]"
       >
         <div className="flex items-center gap-2 text-white">
           <img
@@ -64,7 +64,7 @@ const Tools = ({ mainMenuOpen }) => {
             transition={{
               duration: 0.3,
             }}
-            className="overflow-hidden ml-2 mt-2 space-y-2 text-xl text-white"
+            className="overflow-hidden ml-2 mt-2 space-y-1 text-base text-white"
           >
             <li>
               <NavLink

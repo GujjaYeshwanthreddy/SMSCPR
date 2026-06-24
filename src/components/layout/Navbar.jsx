@@ -15,7 +15,7 @@ const Navbar = ({ mainMenuOpen, setMainMenuOpen }) => {
           <img
             src="/strategic-logo.svg"
             alt="logo-img"
-          className="h-14 w-auto justify-center"
+          className="h-10 w-auto justify-center"
           ></img>
         </div>
   <div className="flex items-center gap-16">

@@ -15,14 +15,14 @@ const MainContent = ({ mainMenuOpen }) => {
   return (
     <div className="flex flex-1">
       <div
-        className={`fixed left-0 top-[67px]
+        className={`fixed left-0 top-[60px]
   bg-[#006EC2] transition-all duration-300 overflow-hidden gap-2
   ${mainMenuOpen ? "w-[240px]" : "w-[70px]"}
   h-[calc(100vh-67px)]`}
       >
     <div className="flex flex-col justify-between h-full">
         <div className="flex-1 mt-2 ml-4 mr-4 overflow-hidden">
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-4 space-y-1">
               <Home mainMenuOpen={mainMenuOpen} />
               <Dashboard mainMenuOpen={mainMenuOpen} />
 
@@ -45,7 +45,7 @@ const MainContent = ({ mainMenuOpen }) => {
               <Api mainMenuOpen={mainMenuOpen} />
             </ul>
           </div>
-      <div className="px-4 pb-12 ">
+      <div className="px-4 pb-8 mb-1 ">
             {mainMenuOpen && <h1 className="text-base font-semibold text-white">Personal</h1>}
 
             <div className="flex items-start  gap-3 ">
@@ -57,9 +57,9 @@ const MainContent = ({ mainMenuOpen }) => {
 
               {mainMenuOpen && (
                 <div className="flex flex-col">
-                  <h1 className="text-xl text-white">Credits</h1>
+                  <h1 className="text-base text-white">Credits</h1>
 
-                  <h2 className="text-xl text-white">USD 86,682.27</h2>
+                  <h2 className="text-base text-white">USD 86,682.27</h2>
                 </div>
               )}
             </div>

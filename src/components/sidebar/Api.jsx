@@ -11,7 +11,7 @@ const Api = ({ mainMenuOpen }) => {
         onClick={() => setOpen(!open)}
         className="flex items-center gap-3 cursor-pointer justify-between px-2 py-2 rounded-md hover:bg-[#005A9C]"
       >
-        <div className="flex items-center gap-3 text-xl text-white">
+        <div className="flex items-center gap-3 text-base text-white">
           <img src="/navbar/code.svg" alt="code-logo" className="w-8 h-8" />
           {mainMenuOpen && <span>API</span>}
         </div>

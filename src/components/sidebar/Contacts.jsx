@@ -54,7 +54,7 @@ const Contacts = ({ mainMenuOpen }) => {
             transition={{
               duration: 0.3,
             }}
-            className="overflow-hidden ml-2 mt-2 space-y-2 text-xl text-white"
+            className="overflow-hidden ml-2 mt-2 space-y-1 text-base text-white"
           >
             <li>
               <NavLink
