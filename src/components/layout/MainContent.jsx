@@ -45,7 +45,7 @@ const MainContent = ({ mainMenuOpen }) => {
               <Api mainMenuOpen={mainMenuOpen} />
             </ul>
           </div>
-      <div className="px-4 pb-4 mb-0.5 ">
+      <div className="px-4 pb-4">
             {mainMenuOpen && <h1 className="text-base  text-white">Personal</h1>}
 
             <div className="flex items-start  gap-3 ">
