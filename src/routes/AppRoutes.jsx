@@ -14,7 +14,7 @@ import ScheduleCampaignsPage from "../Pages/Campaigns/ScheduleCampaignsPage";
 
 import MediaLibraryPage from "../Pages/Tools/MediaLibraryPage";
 import UrlShortenerPage from "../Pages/Tools/UrlShortenerPage";
-import MessageTemplatesPage from "../Pages/Tools/MessageTemplatePages";
+import MessageTemplatesPage from "../Pages/Tools/MessageTemplatesPage";
 import IntegrationsPage from "../Pages/Tools/IntegrationsPage";
 
 import VirtualNumbersPage from "../Pages/Numbers/VirtualNumbersPage";

@@ -65,13 +65,9 @@ const MainContent = ({ mainMenuOpen }) => {
           </div>
         </div>
       </div>
-      <div
-        className={`flex-1 min-w-0 transition-all duration-300
-  ${mainMenuOpen ? "ml-[0px]" : "ml-[0px]"}
-  `}
-      >
-        <Outlet />
-      </div>
+   <div className="flex-1 min-w-0 transition-all duration-300">
+  <Outlet />
+</div>
     </div>
   );
 };
