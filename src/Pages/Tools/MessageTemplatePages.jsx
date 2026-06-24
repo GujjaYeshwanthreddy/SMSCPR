@@ -1,6 +1,6 @@
 import PageHeader from "../../components/layout/PageHeader";
 
-const MessageTemplatesPage = () => {
+const MessageTemplatePages = () => {
   return (
     <PageHeader
       items={[
@@ -20,4 +20,4 @@ const MessageTemplatesPage = () => {
   );
 };
 
-export default MessageTemplatesPage;
+export default MessageTemplatePages;

@@ -14,7 +14,7 @@ import ScheduleCampaignsPage from "../Pages/Campaigns/ScheduleCampaignsPage";
 
 import MediaLibraryPage from "../Pages/Tools/MediaLibraryPage";
 import UrlShortenerPage from "../Pages/Tools/UrlShortenerPage";
-import MessageTemplatesPage from "../Pages/Tools/MessageTemplatesPage";
+import MessageTemplatePages from "../Pages/Tools/MessageTemplatePages";
 import IntegrationsPage from "../Pages/Tools/IntegrationsPage";
 
 import VirtualNumbersPage from "../Pages/Numbers/VirtualNumbersPage";
@@ -28,7 +28,7 @@ import InboxPage from "../Pages/Reports/InboxPage";
 
 import HttpApiPage from "../Pages/Api/HttpApiPage";
 
-import LivechatPage from "../Pages/Livechat/LivechatPage";
+import LivechatPage from "../Pages/LiveChat/LivechatPage";
 import CustomFieldsPage from "../Pages/Contacts/CustomFieldsPage";
 
 const AppRoutes = ({ mainMenuOpen }) => {
