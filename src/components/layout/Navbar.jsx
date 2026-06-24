@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = ({ mainMenuOpen, setMainMenuOpen }) => {
   return (
-   <div className="fixed top-0 left-0 right-0 z-50 bg-[#003F70] h-[80px] w-full">
+   <div className="fixed top-0 left-0 right-0 z-50 bg-[#003F70] h-[67px] w-full">
       <nav className="h-full flex items-center justify-between px-3 md:px-8 text-white py-3 overflow-hidden">
         <div className="flex items-center gap-3 md:gap-8">
           <img
@@ -15,7 +15,7 @@ const Navbar = ({ mainMenuOpen, setMainMenuOpen }) => {
           <img
             src="/strategic-logo.svg"
             alt="logo-img"
-          className="h-15 w-auto justify-center"
+          className="h-14 w-auto justify-center"
           ></img>
         </div>
   <div className="flex items-center gap-16">

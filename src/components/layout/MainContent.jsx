@@ -15,26 +15,26 @@ const MainContent = ({ mainMenuOpen }) => {
   return (
     <div className="flex flex-1">
       <div
-        className={`fixed left-0 top-[80px]
+        className={`fixed left-0 top-[67px]
   bg-[#006EC2] transition-all duration-300 overflow-hidden gap-2
-  ${mainMenuOpen ? "w-[260px]" : "w-[70px]"}
-  h-[calc(100vh-80px)]`}
+  ${mainMenuOpen ? "w-[240px]" : "w-[70px]"}
+  h-[calc(100vh-67px)]`}
       >
     <div className="flex flex-col justify-between h-full">
         <div className="flex-1 mt-2 ml-4 mr-4 overflow-hidden">
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-3">
               <Home mainMenuOpen={mainMenuOpen} />
               <Dashboard mainMenuOpen={mainMenuOpen} />
 
               {mainMenuOpen && (
-                <h1 className="text-lg  text-white">Communication</h1>
+                <h1 className="text-base font-semibold text-white">Communication</h1>
               )}
 
               <CampaignsDropdown mainMenuOpen={mainMenuOpen} />
 
               <Tools mainMenuOpen={mainMenuOpen} />
               <Livechat mainMenuOpen={mainMenuOpen} />
-              {mainMenuOpen && <h1 className="text-xl text-white">Manage</h1>}
+              {mainMenuOpen && <h1 className="text-base font-semibold text-white">Manage</h1>}
 
               <Numbers mainMenuOpen={mainMenuOpen} />
 
@@ -45,10 +45,10 @@ const MainContent = ({ mainMenuOpen }) => {
               <Api mainMenuOpen={mainMenuOpen} />
             </ul>
           </div>
-      <div className="px-4 pb-8 ">
-            {mainMenuOpen && <h1 className="text-xl  text-white">Personal</h1>}
+      <div className="px-4 pb-12 ">
+            {mainMenuOpen && <h1 className="text-base font-semibold text-white">Personal</h1>}
 
-            <div className="flex start  gap-3 ">
+            <div className="flex items-start  gap-3 ">
               <img
                 src="/navbar/coins.svg"
                 alt="coins-logo"
@@ -57,9 +57,9 @@ const MainContent = ({ mainMenuOpen }) => {
 
               {mainMenuOpen && (
                 <div className="flex flex-col">
-                  <h1 className="text-lg text-white">Credits</h1>
+                  <h1 className="text-xl text-white">Credits</h1>
 
-                  <span className="text-lg text-white">USD 86,682.27</span>
+                  <h2 className="text-xl text-white">USD 86,682.27</h2>
                 </div>
               )}
             </div>
@@ -67,8 +67,8 @@ const MainContent = ({ mainMenuOpen }) => {
         </div>
       </div>
       <div
-        className={`flex-1 min-w-0 transition-all duration-300 pt-[80px] ml-2
-  ${mainMenuOpen ? "ml-[260px]" : "ml-[70px]"}`}
+        className={`flex-1 min-w-0 transition-all duration-300 pt-[67px] ml-2
+  ${mainMenuOpen ? "ml-[240px]" : "ml-[70px]"}`}
       >
         <Outlet />
       </div>
