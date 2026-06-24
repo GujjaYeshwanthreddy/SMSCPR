@@ -22,7 +22,7 @@ const MainContent = ({ mainMenuOpen }) => {
       >
     <div className="flex flex-col justify-between h-full">
         <div className="flex-1 mt-2 ml-4 mr-4 overflow-hidden">
-            <ul className="mt-4 space-y-4">
+            <ul className="mt-4 space-y-2">
               <Home mainMenuOpen={mainMenuOpen} />
               <Dashboard mainMenuOpen={mainMenuOpen} />
 
