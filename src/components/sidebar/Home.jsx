@@ -1,0 +1,23 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const Home = ({ mainMenuOpen }) => {
+  return (
+    <NavLink
+      to="/"
+      end
+      className={({ isActive }) =>
+        `flex items-center gap-3 text-xl px-2 py-2 rounded-md cursor-pointer
+        ${
+          isActive ? "bg-[#005A9C] text-white" : "text-white hover:bg-[#005A9C]"
+        }`
+      }
+    >
+      <img src="/navbar/house.svg" alt="house-logo" className="w-8 h-8" />
+
+      {mainMenuOpen && <span>Home</span>}
+    </NavLink>
+  );
+};
+
+export default Home;

@@ -1,0 +1,6 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="box-archive">
+<path id="Secondary" d="M1 4V13C1 14.1031 1.89688 15 3 15H13C14.1031 15 15 14.1031 15 13V4H1ZM5 7C5 6.44688 5.44688 6 6 6H10C10.5531 6 11 6.44688 11 7C11 7.55312 10.5531 8 10 8H6C5.44688 8 5 7.55312 5 7Z" fill="#65BCFF"/>
+<path id="Primary" d="M0 2C0 1.44687 0.446875 1 1 1H15C15.5531 1 16 1.44687 16 2V3C16 3.55312 15.5531 4 15 4H1C0.446875 4 0 3.55312 0 3V2Z" fill="#FCFCFC"/>
+</g>
+</svg>

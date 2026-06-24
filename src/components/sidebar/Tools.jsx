@@ -1,0 +1,145 @@
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+
+const Tools = ({ mainMenuOpen }) => {
+  const location = useLocation();
+
+  const isToolsRoute = location.pathname.startsWith("/tools");
+
+  const [open, setOpen] = useState(isToolsRoute);
+
+  useEffect(() => {
+    if (isToolsRoute) {
+      setOpen(true);
+    }
+  }, [isToolsRoute]);
+
+  return (
+    <>
+      <li
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-3 px-2 text-xl cursor-pointer py-2 justify-between rounded-md hover:bg-[#005A9C]"
+      >
+        <div className="flex items-center gap-2 text-white">
+          <img
+            src="/navbar/screwdriver-wrench.svg"
+            alt="screwdriver-wrench"
+            className="w-8 h-7"
+          />
+
+          {mainMenuOpen && <span>Tools</span>}
+        </div>
+
+        {mainMenuOpen && (
+          <motion.img
+            src="/cheveron-down.svg"
+            alt="chevron"
+            className="w-6 h-6"
+            animate={{
+              rotate: open ? 180 : 0,
+            }}
+            transition={{
+              duration: 0.3,
+            }}
+          />
+        )}
+      </li>
+
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            initial={{
+              height: 0,
+              opacity: 0,
+            }}
+            animate={{
+              height: "auto",
+              opacity: 1,
+            }}
+            exit={{
+              height: 0,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.3,
+            }}
+            className="overflow-hidden ml-2 mt-2 space-y-2 text-xl text-white"
+          >
+            <li>
+              <NavLink
+                to="/tools/media-library"
+                className={({ isActive }) =>
+                  `flex items-center gap-3 px-2 py-2 rounded-md ${
+                    isActive
+                      ? "bg-[#005A9C] text-white"
+                      : "text-white hover:bg-[#005A9C]"
+                  }`
+                }
+              >
+                <img
+                  src="/navbar/tools/photo-film-music.svg"
+                  alt="media-library"
+                />
+                <span>Media Library</span>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/tools/url-shortener"
+                className={({ isActive }) =>
+                  `flex items-center gap-3 px-2 py-2 rounded-md ${
+                    isActive
+                      ? "bg-[#005A9C] text-white"
+                      : "text-white hover:bg-[#005A9C]"
+                  }`
+                }
+              >
+                <img src="/navbar/tools/link.svg" alt="url-shortener" />
+                <span>URL Shortener</span>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/tools/message-templates"
+                className={({ isActive }) =>
+                  `flex items-center gap-3 px-2 py-2 rounded-md ${
+                    isActive
+                      ? "bg-[#005A9C] text-white"
+                      : "text-white hover:bg-[#005A9C]"
+                  }`
+                }
+              >
+                <img
+                  src="/navbar/tools/envelope-open-text.svg"
+                  alt="message-templates"
+                />
+                <span>Message Templates</span>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/tools/integrations"
+                className={({ isActive }) =>
+                  `flex items-center gap-3 px-2 py-2 rounded-md ${
+                    isActive
+                      ? "bg-[#005A9C] text-white"
+                      : "text-white hover:bg-[#005A9C]"
+                  }`
+                }
+              >
+                <img src="/navbar/tools/gear-code.svg" alt="integrations" />
+                <span>Integrations</span>
+              </NavLink>
+            </li>
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+export default Tools;
