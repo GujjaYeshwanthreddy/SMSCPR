@@ -62,7 +62,7 @@ const AppRoutes = ({ mainMenuOpen }) => {
 
         <Route
           path="tools/message-templates"
-          element={<MessageTemplatesPage />}
+          element={<MessageTemplatePages/>}
         />
 
         <Route path="tools/integrations" element={<IntegrationsPage />} />
