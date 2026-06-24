@@ -17,7 +17,7 @@ const MainContent = ({ mainMenuOpen }) => {
       <div
         className={`fixed left-0 top-[67px]
   bg-[#006EC2] transition-all duration-300 overflow-hidden gap-2
-  ${mainMenuOpen ? "w-[260px]" : "w-[70px]"}
+  ${mainMenuOpen ? "w-[250px]" : "w-[70px]"}
   h-[calc(100vh-67px)]`}
       >
     <div className="flex flex-col justify-between h-full">
@@ -68,7 +68,7 @@ const MainContent = ({ mainMenuOpen }) => {
       </div>
       <div
         className={`flex-1 min-w-0 transition-all duration-300 pt-[67px]
-  ${mainMenuOpen ? "ml-[240px]" : "ml-[70px]"}`}
+  ${mainMenuOpen ? "ml-[250px]" : "ml-[70px]"}`}
       >
         <Outlet />
       </div>

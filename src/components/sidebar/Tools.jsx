@@ -114,7 +114,7 @@ const Tools = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/tools/envelope-open-text.svg"
-                  alt="message-templates"
+                  alt="message-templates"  className="w-6 h-6"
                 />
                 <span>Message Templates</span>
               </NavLink>

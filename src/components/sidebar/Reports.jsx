@@ -15,7 +15,7 @@ const Reports = ({ mainMenuOpen }) => {
           <img
             src="/navbar/file-chart-column.svg"
             alt="file-chart-logo"
-            className="w-8 h-8"
+            className="w-6 h-6"
           />
 
           {mainMenuOpen && <span>Reports</span>}
@@ -58,7 +58,7 @@ const Reports = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/reports/box-archive.svg"
-                  alt="campaign-status-logo"
+                  alt="campaign-status-logo" className="w-6 h-6"
                 />
                 <span>Campaign Status</span>
               </NavLink>
@@ -75,7 +75,7 @@ const Reports = ({ mainMenuOpen }) => {
                   }`
                 }
               >
-                <img src="/navbar/reports/inbox.svg" alt="inbox-logo" />
+                <img src="/navbar/reports/inbox.svg" alt="inbox-logo" className="w-6 h-6"/>
                 <span>Inbox</span>
               </NavLink>
             </li>

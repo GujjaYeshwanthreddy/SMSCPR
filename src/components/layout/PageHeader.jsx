@@ -9,7 +9,8 @@ const PageHeader = ({ items }) => {
             <img
               src={item.icon}
               alt={item.label || "icon"}
-              className="w-7 h-7"
+              className="w-6 h-6"
+
             />
 
             {item.label && (

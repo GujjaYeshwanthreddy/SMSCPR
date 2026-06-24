@@ -12,7 +12,7 @@ const CampaignsDropdown = ({ mainMenuOpen }) => {
         className="flex items-center gap-2 justify--base cursor-pointer px-2 py-2 rounded-md hover:bg-[#005A9C]"
       >
         <div className="flex items-center gap-3  text-white">
-          <img src="/navbar/bullhorn.svg" alt="bullhorn" className="w-8 h-8" />
+          <img src="/navbar/bullhorn.svg" alt="bullhorn" className="w-6 h-6" />
 
           {mainMenuOpen && <span className=" text-white">Campaigns</span>}
         </div>
