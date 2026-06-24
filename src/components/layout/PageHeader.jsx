@@ -2,7 +2,7 @@ import React from "react";
 
 const PageHeader = ({ items }) => {
   return (
-    <div className="w-full h-[64px] bg-[#069EDC] flex items-center gap-4 px-6">
+    <div className="w-full h-[67px] bg-[#069EDC] flex items-center gap-4 px-6">
       {items.map((item, index) => (
         <React.Fragment key={index}>
           <div className="flex items-center gap-3">

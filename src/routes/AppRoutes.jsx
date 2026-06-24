@@ -28,7 +28,7 @@ import InboxPage from "../Pages/Reports/InboxPage";
 
 import HttpApiPage from "../Pages/Api/HttpApiPage";
 
-import LivechatPage from "../Pages/LiveChat/LivechatPage";
+import LivechatPage from "../Pages/LiveChat/LiveChatPage";
 import CustomFieldsPage from "../Pages/Contacts/CustomFieldsPage";
 
 const AppRoutes = ({ mainMenuOpen }) => {
