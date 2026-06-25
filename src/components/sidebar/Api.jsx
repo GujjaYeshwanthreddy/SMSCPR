@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const Api = ({ mainMenuOpen }) => {
-  const [open, setOpen] = useState(false);
+const Api = ({
+  mainMenuOpen,
+  activeDropdown,
+  setActiveDropdown,
+}) => {
+ const open = activeDropdown === "api";
 
   return (
     <>
       <li
-        onClick={() => setOpen(!open)}
+       onClick={() =>
+  setActiveDropdown(open ? null : "api")
+}
         className="flex items-center gap-2 cursor-pointer text-base justify-between px-2 py-2 rounded-md hover:bg-[#005A9C]"
       >
         <div className="flex items-center gap-3  text-white">

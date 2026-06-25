@@ -1,24 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
 
-const Tools = ({ mainMenuOpen }) => {
-  const location = useLocation();
-
-  const isToolsRoute = location.pathname.startsWith("/tools");
-
-  const [open, setOpen] = useState(isToolsRoute);
-
-  useEffect(() => {
-    if (isToolsRoute) {
-      setOpen(true);
-    }
-  }, [isToolsRoute]);
-
+const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
+  const open = activeDropdown === "tools";
   return (
     <>
       <li
-        onClick={() => setOpen(!open)}
+        onClick={() => setActiveDropdown(open ? null : "numbers")}
         className="flex items-center gap-3 px-2 text-base cursor-pointer py-2 justify-between rounded-md hover:bg-[#005A9C]"
       >
         <div className="flex items-center gap-2 text-white">
@@ -79,7 +68,8 @@ const Tools = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/tools/photo-film-music.svg"
-                  alt="media-library" className="w-6 h-6"
+                  alt="media-library"
+                  className="w-6 h-6"
                 />
                 <span>Media Library</span>
               </NavLink>
@@ -96,7 +86,11 @@ const Tools = ({ mainMenuOpen }) => {
                   }`
                 }
               >
-                <img src="/navbar/tools/link.svg" alt="url-shortener" className="w-6 h-6" />
+                <img
+                  src="/navbar/tools/link.svg"
+                  alt="url-shortener"
+                  className="w-6 h-6"
+                />
                 <span>URL Shortener</span>
               </NavLink>
             </li>
@@ -114,7 +108,8 @@ const Tools = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/tools/envelope-open-text.svg"
-                  alt="message-templates"  className="w-6 h-6"
+                  alt="message-templates"
+                  className="w-6 h-6"
                 />
                 <span>Message Templates</span>
               </NavLink>

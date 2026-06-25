@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Reports = ({ mainMenuOpen }) => {
-  const [open, setOpen] = useState(false);
-
+const Reports = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
+  const open = activeDropdown === "reports";
   return (
     <>
       <li
-        onClick={() => setOpen(!open)}
+        onClick={() => setActiveDropdown(open ? null : "reports")}
         className="flex items-center gap-3 px-2 cursor-pointer py-2 text-base justify-between rounded-md hover:bg-[#005A9C]"
       >
         <div className="flex items-center gap-3 text-white ">
@@ -58,7 +57,8 @@ const Reports = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/reports/box-archive.svg"
-                  alt="campaign-status-logo" className="w-6 h-6"
+                  alt="campaign-status-logo"
+                  className="w-6 h-6"
                 />
                 <span>Campaign Status</span>
               </NavLink>
@@ -75,7 +75,11 @@ const Reports = ({ mainMenuOpen }) => {
                   }`
                 }
               >
-                <img src="/navbar/reports/inbox.svg" alt="inbox-logo" className="w-6 h-6"/>
+                <img
+                  src="/navbar/reports/inbox.svg"
+                  alt="inbox-logo"
+                  className="w-6 h-6"
+                />
                 <span>Inbox</span>
               </NavLink>
             </li>

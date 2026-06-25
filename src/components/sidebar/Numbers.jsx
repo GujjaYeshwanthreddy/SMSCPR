@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Numbers = ({ mainMenuOpen }) => {
-  const [open, setOpen] = useState(false);
+const Numbers = ({
+  mainMenuOpen,
+  activeDropdown,
+  setActiveDropdown,
+}) => {
+  const open = activeDropdown === "numbers";
 
   return (
     <>
       <li
-        onClick={() => setOpen(!open)}
+       onClick={() =>
+  setActiveDropdown(open ? null : "numbers")
+}
         className="flex items-center gap-2 text-base px-2 cursor-pointer justify-between py-2 rounded-md hover:bg-[#005A9C]"
       >
         <div className="flex items-center gap-3 text-white ">

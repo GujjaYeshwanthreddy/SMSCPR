@@ -1,14 +1,14 @@
-import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Contacts = ({ mainMenuOpen }) => {
-  const [open, setOpen] = useState(false);
+const Contacts = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
+  const open = activeDropdown === "contacts";
 
   return (
     <>
       <li
-        onClick={() => setOpen(!open)}
+        onClick={() => setActiveDropdown(open ? null : "contacts")}
         className="flex items-center cursor-pointer gap-2 text-base justify-between px-2 py-2 rounded-md hover:bg-[#005A9C]"
       >
         <div className="flex items-center gap-3  text-white">
@@ -70,7 +70,8 @@ const Contacts = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/Contacts/users-medical.svg"
-                  alt="users-medical-logo" className="w-6 h-6"
+                  alt="users-medical-logo"
+                  className="w-6 h-6"
                 />
                 <span>Contact Groups</span>
               </NavLink>
@@ -90,7 +91,8 @@ const Contacts = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/Contacts/layer-group.svg"
-                  alt="layer-group-logo" className="w-6 h-6"
+                  alt="layer-group-logo"
+                  className="w-6 h-6"
                 />
                 <span>Segments</span>
               </NavLink>
@@ -110,7 +112,8 @@ const Contacts = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/Contacts/list-check.svg"
-                  alt="list-check-logo" className="w-6 h-6"
+                  alt="list-check-logo"
+                  className="w-6 h-6"
                 />
                 <span>Custom Fields</span>
               </NavLink>

@@ -1,14 +1,18 @@
-import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const CampaignsDropdown = ({ mainMenuOpen }) => {
-  const [open, setOpen] = useState(false);
+const CampaignsDropdown = ({
+  mainMenuOpen,
+  activeDropdown,
+  setActiveDropdown,
+}) => {
+  const open = activeDropdown === "campaigns";
 
   return (
     <>
       <li
-        onClick={() => setOpen(!open)}
+        onClick={() => setActiveDropdown(open ? null : "campaigns")}
         className="flex items-center gap-2 justify--base cursor-pointer px-2 py-2 rounded-md hover:bg-[#005A9C]"
       >
         <div className="flex items-center gap-3  text-white">
@@ -55,7 +59,8 @@ const CampaignsDropdown = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/campaigns/paper-plane.svg"
-                  alt="paper-plane" className="w-6 h-6"
+                  alt="paper-plane"
+                  className="w-6 h-6"
                 />
                 <span>Send Message</span>
               </NavLink>
@@ -75,7 +80,8 @@ const CampaignsDropdown = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/campaigns/arrows-turn-to-dots.svg"
-                  alt="campaigns-logo" className="w-6 h-6"
+                  alt="campaigns-logo"
+                  className="w-6 h-6"
                 />
                 <span>2-Way Messaging</span>
               </NavLink>
@@ -93,7 +99,11 @@ const CampaignsDropdown = ({ mainMenuOpen }) => {
                   }`
                 }
               >
-                <img src="/navbar/campaigns/sliders.svg" alt="autoresponders"  className="w-6 h-6"/>
+                <img
+                  src="/navbar/campaigns/sliders.svg"
+                  alt="autoresponders"
+                  className="w-6 h-6"
+                />
                 <span>Autoresponders</span>
               </NavLink>
             </li>
@@ -112,7 +122,8 @@ const CampaignsDropdown = ({ mainMenuOpen }) => {
               >
                 <img
                   src="/navbar/campaigns/calendar-clock.svg"
-                  alt="schedule" className="w-6 h-6"
+                  alt="schedule"
+                  className="w-6 h-6"
                 />
                 <span>Schedule Campaigns</span>
               </NavLink>
