@@ -1,24 +1,20 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-
-const Api = ({
-  mainMenuOpen,
-  activeDropdown,
-  setActiveDropdown,
-}) => {
- const open = activeDropdown === "api";
+import { NavLink } from "react-router-dom";
+const Api = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
+  const open = activeDropdown === "api";
 
   return (
     <>
-      <li
-       onClick={() =>
-  setActiveDropdown(open ? null : "api")
-}
-        className="flex items-center gap-2 cursor-pointer text-base justify-between px-2 py-2 rounded-md hover:bg-[#005A9C]"
+      <motion.li
+        layout
+        onClick={() => setActiveDropdown(open ? null : "api")}
+        className="flex items-center gap-2 cursor-pointer text-sm justify-between px-2 py-1.5 rounded-md hover:bg-[#005A9C]"
       >
-        <div className="flex items-center gap-3  text-white">
-          <img src="/navbar/code.svg" alt="code-logo" className="w-6 h-6" />
+        <div className="flex items-center gap-2 text-white">
+          <img src="/navbar/code.svg" alt="code-logo" className="w-5 h-5" />
+
           {mainMenuOpen && <span>API</span>}
         </div>
 
@@ -26,46 +22,48 @@ const Api = ({
           <motion.img
             src="/cheveron-down.svg"
             alt="chevron"
-            className="w-6 h-6"
-            animate={{
-              rotate: open ? 180 : 0,
-            }}
+            className="w-5 h-5"
+            animate={{ rotate: open ? 180 : 0 }}
             transition={{
-              duration: 0.3,
+              duration: 0.2,
+              ease: "easeInOut",
             }}
           />
         )}
-      </li>
+      </motion.li>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {open && (
           <motion.ul
-            initial={{
-              height: 0,
-              opacity: 0,
-            }}
-            animate={{
-              height: "auto",
-              opacity: 1,
-            }}
-            exit={{
-              height: 0,
-              opacity: 0,
-            }}
+            layout
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
             transition={{
-              duration: 0.3,
+              height: {
+                duration: 0.3,
+                ease: "easeInOut",
+              },
+              opacity: {
+                duration: 0.15,
+              },
             }}
-            className="overflow-hidden ml-2 mt-2 space-y-2 text-base"
+            style={{ willChange: "height, opacity" }}
+            className="overflow-hidden ml-2 mt-2 space-y-0.5 text-sm text-white"
           >
             <li>
-              <Link
+              <NavLink
                 to="/api/http-api"
-                className="flex items-center gap-3 px-2 py-2 rounded-md hover:bg-[#005A9C] text-white"
+                className="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-[#005A9C] text-white"
               >
-                <img src="/navbar/reports/inbox.svg" alt="http-api-logo" className="w-6 h-6" />
+                <img
+                  src="/navbar/reports/inbox.svg"
+                  alt="http-api-logo"
+                  className="w-5 h-5"
+                />
 
                 <span>HTTP API</span>
-              </Link>
+              </NavLink>
             </li>
           </motion.ul>
         )}

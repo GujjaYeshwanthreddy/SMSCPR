@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Contacts = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
@@ -7,15 +7,16 @@ const Contacts = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
 
   return (
     <>
-      <li
+      <motion.li
+        layout
         onClick={() => setActiveDropdown(open ? null : "contacts")}
-        className="flex items-center cursor-pointer gap-2 text-base justify-between px-2 py-2 rounded-md hover:bg-[#005A9C]"
+        className="flex items-center justify-between gap-2 cursor-pointer text-sm px-2 py-1.5 rounded-md hover:bg-[#005A9C]"
       >
-        <div className="flex items-center gap-3  text-white">
+        <div className="flex items-center gap-2 text-white">
           <img
             src="/navbar/address-book.svg"
             alt="address-logo"
-            className="w-6 h-6"
+            className="w-5 h-5"
           />
 
           {mainMenuOpen && <span>Contacts</span>}
@@ -25,43 +26,44 @@ const Contacts = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
           <motion.img
             src="/cheveron-down.svg"
             alt="chevron"
-            className="w-6 h-6 ml-auto"
-            animate={{
-              rotate: open ? 180 : 0,
-            }}
+            className="w-5 h-5"
+            animate={{ rotate: open ? 180 : 0 }}
             transition={{
-              duration: 0.3,
+              duration: 0.2,
+              ease: "easeInOut",
             }}
           />
         )}
-      </li>
+      </motion.li>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {open && (
           <motion.ul
-            initial={{
-              height: 0,
-              opacity: 0,
-            }}
-            animate={{
-              height: "auto",
-              opacity: 1,
-            }}
-            exit={{
-              height: 0,
-              opacity: 0,
-            }}
+            layout
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
             transition={{
-              duration: 0.3,
+              layout: {
+                duration: 0.25,
+                ease: "easeInOut",
+              },
+              height: {
+                duration: 0.3,
+                ease: "easeInOut",
+              },
+              opacity: {
+                duration: 0.15,
+              },
             }}
-            className="overflow-hidden ml-2 mt-2 space-y-1 text-base text-white"
+            style={{ willChange: "height, opacity" }}
+            className="overflow-hidden ml-2 mt-2 space-y-0.5 text-sm text-white"
           >
             <li>
               <NavLink
                 to="/contacts/contact-groups"
                 className={({ isActive }) =>
-                  `flex items-center gap-2 px-2 py-2 rounded-md
-                  ${
+                  `flex items-center gap-2 px-2 py-1.5 rounded-md ${
                     isActive
                       ? "bg-[#005A9C] text-white"
                       : "text-white hover:bg-[#005A9C]"
@@ -71,7 +73,7 @@ const Contacts = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
                 <img
                   src="/navbar/Contacts/users-medical.svg"
                   alt="users-medical-logo"
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                 />
                 <span>Contact Groups</span>
               </NavLink>
@@ -81,8 +83,7 @@ const Contacts = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               <NavLink
                 to="/contacts/segments"
                 className={({ isActive }) =>
-                  `flex items-center gap-2 px-2 py-2 rounded-md
-                  ${
+                  `flex items-center gap-2 px-2 py-1.5 rounded-md ${
                     isActive
                       ? "bg-[#005A9C] text-white"
                       : "text-white hover:bg-[#005A9C]"
@@ -92,7 +93,7 @@ const Contacts = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
                 <img
                   src="/navbar/Contacts/layer-group.svg"
                   alt="layer-group-logo"
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                 />
                 <span>Segments</span>
               </NavLink>
@@ -102,8 +103,7 @@ const Contacts = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               <NavLink
                 to="/contacts/custom-fields"
                 className={({ isActive }) =>
-                  `flex items-center gap-2 px-2 py-2 rounded-md
-                  ${
+                  `flex items-center gap-2 px-2 py-1.5 rounded-md ${
                     isActive
                       ? "bg-[#005A9C] text-white"
                       : "text-white hover:bg-[#005A9C]"
@@ -113,7 +113,7 @@ const Contacts = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
                 <img
                   src="/navbar/Contacts/list-check.svg"
                   alt="list-check-logo"
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                 />
                 <span>Custom Fields</span>
               </NavLink>

@@ -14,7 +14,7 @@ const PageHeader = ({ items }) => {
             />
 
             {item.label && (
-              <span className="text-white text-base">{item.label}</span>
+              <span className="text-white text-sm">{item.label}</span>
             )}
           </div>
 

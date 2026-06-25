@@ -6,13 +6,13 @@ const Dashboard = ({ mainMenuOpen }) => {
     <NavLink
       to="/dashboard"
       className={({ isActive }) =>
-        `flex items-center gap-2 text-base px-2 py-2 rounded-md cursor-pointer
+        `flex items-center gap-2 text-sm px-2 py-1.5 rounded-md cursor-pointer
         ${
           isActive ? "bg-[#005A9C] text-white" : "text-white hover:bg-[#005A9C]"
         }`
       }
     >
-      <img src="/navbar/gauge.svg" alt="dashboard-logo" className="w-6 h-6" />
+      <img src="/navbar/gauge.svg" alt="dashboard-logo" className="w-5 h-5" />
 
       {mainMenuOpen && <span>Dashboard</span>}
     </NavLink>
