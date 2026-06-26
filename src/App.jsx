@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+
 import Navbar from "./components/layout/Navbar";
 import AppRoutes from "./routes/AppRoutes";
-import { useState } from "react";
 
 function App() {
-     const [mainMenuOpen, setMainMenuOpen] = useState(true);
+  // Controls the expanded/collapsed state of the sidebar
+  const [mainMenuOpen, setMainMenuOpen] = useState(true);
+
   return (
+    // Wrap the application with React Router
     <BrowserRouter>
-            <Navbar
+      {/* Top navigation bar */}
+      <Navbar
         mainMenuOpen={mainMenuOpen}
         setMainMenuOpen={setMainMenuOpen}
       />
 
-
-      <AppRoutes
-        mainMenuOpen={mainMenuOpen}
-      />
+      {/* Render application routes */}
+      <AppRoutes mainMenuOpen={mainMenuOpen} />
     </BrowserRouter>
   );
 }

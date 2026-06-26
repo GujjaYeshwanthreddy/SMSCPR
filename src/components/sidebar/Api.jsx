@@ -1,23 +1,31 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+
 const Api = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
+  // Check whether the API dropdown is expanded
   const open = activeDropdown === "api";
 
   return (
     <>
+      {/* API parent menu item */}
       <motion.li
         layout
         onClick={() => setActiveDropdown(open ? null : "api")}
-        className="flex items-center gap-2 cursor-pointer text-sm justify-between px-2 py-1.5 rounded-md hover:bg-[#005A9C]"
+        className="flex items-center gap-2 cursor-pointer text-sm justify-between px-2 py-2 rounded-md hover:bg-[#005A9C]"
       >
+        {/* API icon and label */}
         <div className="flex items-center gap-2 text-white">
-          <img src="/navbar/code.svg" alt="code-logo" className="w-5 h-5" />
+          <img
+            src="/navbar/code.svg"
+            alt="code-logo"
+            className="w-5 h-5"
+          />
 
           {mainMenuOpen && <span>API</span>}
         </div>
 
+        {/* Dropdown expand/collapse indicator */}
         {mainMenuOpen && (
           <motion.img
             src="/cheveron-down.svg"
@@ -32,6 +40,7 @@ const Api = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
         )}
       </motion.li>
 
+      {/* Animated submenu */}
       <AnimatePresence initial={false}>
         {open && (
           <motion.ul
@@ -51,10 +60,11 @@ const Api = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
             style={{ willChange: "height, opacity" }}
             className="overflow-hidden ml-2 mt-2 space-y-0.5 text-sm text-white"
           >
+            {/* HTTP API navigation link */}
             <li>
               <NavLink
                 to="/api/http-api"
-                className="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-[#005A9C] text-white"
+                className="flex items-center gap-2 px-2 py-2 rounded-lg hover:bg-[#005A9C] text-white"
               >
                 <img
                   src="/navbar/reports/inbox.svg"

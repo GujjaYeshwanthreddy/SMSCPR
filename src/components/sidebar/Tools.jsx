@@ -3,13 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 
 const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
+  // Check whether the Tools dropdown is expanded
   const open = activeDropdown === "tools";
+
   return (
     <>
+      {/* Tools parent menu item */}
       <li
         onClick={() => setActiveDropdown(open ? null : "tools")}
-        className="flex items-center gap-2 px-2 text-sm cursor-pointer py-2 justify-between rounded-md hover:bg-[#005A9C]"
+        className="flex items-center gap-2 px-2 text-sm cursor-pointer py-1 justify-between rounded-lg hover:bg-[#005A9C]"
       >
+        {/* Tools icon and label */}
         <div className="flex items-center gap-2 text-white">
           <img
             src="/navbar/screwdriver-wrench.svg"
@@ -20,22 +24,20 @@ const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
           {mainMenuOpen && <span>Tools</span>}
         </div>
 
+        {/* Dropdown expand/collapse indicator */}
         {mainMenuOpen && (
           <motion.img
             src="/cheveron-down.svg"
             alt="chevron"
             className="w-5 h-5"
-            animate={{
-              rotate: open ? 180 : 0,
-            }}
-            transition={{
-              duration: 0.3,
-            }}
+            animate={{ rotate: open ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
           />
         )}
       </li>
 
-      <AnimatePresence initial={false} >
+      {/* Animated Tools submenu */}
+      <AnimatePresence initial={false}>
         {open && (
           <motion.ul
             initial={{ height: 0, opacity: 0 }}
@@ -51,13 +53,14 @@ const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               },
             }}
             style={{ willChange: "height, opacity" }}
-            className="overflow-hidden ml-2 mt-2 space-y-0.5 text-sm text-white"
+            className="overflow-hidden ml-2 mt-2 space-y-1 text-sm text-white"
           >
+            {/* Media Library navigation link */}
             <li>
               <NavLink
                 to="/tools/media-library"
                 className={({ isActive }) =>
-                  `flex items-center gap-2 px-2 py-2 rounded-md ${
+                  `flex items-center gap-2 px-2 py-2 rounded-lg ${
                     isActive
                       ? "bg-[#005A9C] text-white"
                       : "text-white hover:bg-[#005A9C]"
@@ -73,11 +76,12 @@ const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               </NavLink>
             </li>
 
+            {/* URL Shortener navigation link */}
             <li>
               <NavLink
                 to="/tools/url-shortener"
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-2 py-2 rounded-md ${
+                  `flex items-center gap-3 px-2 py-1.5 rounded-lg ${
                     isActive
                       ? "bg-[#005A9C] text-white"
                       : "text-white hover:bg-[#005A9C]"
@@ -93,11 +97,12 @@ const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               </NavLink>
             </li>
 
+            {/* Message Templates navigation link */}
             <li>
               <NavLink
                 to="/tools/message-templates"
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-2 py-1.5 rounded-md ${
+                  `flex items-center gap-3 px-2 py-1.5 rounded-lg ${
                     isActive
                       ? "bg-[#005A9C] text-white"
                       : "text-white hover:bg-[#005A9C]"
@@ -113,11 +118,12 @@ const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               </NavLink>
             </li>
 
+            {/* Integrations navigation link */}
             <li>
               <NavLink
                 to="/tools/integrations"
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-2 py-1.5 rounded-md ${
+                  `flex items-center gap-3 px-2 py-1.5 rounded-lg ${
                     isActive
                       ? "bg-[#005A9C] text-white"
                       : "text-white hover:bg-[#005A9C]"

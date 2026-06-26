@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 
+// Sidebar menu components
 import CampaignsDropdown from "../sidebar/CampaignsDropdown";
 import Tools from "../sidebar/Tools";
 import Numbers from "../sidebar/Numbers";
@@ -12,78 +13,94 @@ import Dashboard from "../sidebar/Dashboard";
 import Livechat from "../sidebar/Livechat";
 
 const MainContent = ({ mainMenuOpen }) => {
+  // Tracks which sidebar dropdown is currently expanded
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   return (
-    <div className="flex flex-1">
+    <div className="flex h-screen overflow-hidden">
+      {/* Left Sidebar */}
       <div
-        className={`fixed left-0 top-[67px] bg-[#006EC2] transition-all duration-300
-        ${mainMenuOpen ? "w-[240px]" : "w-[70px]"}
-        h-[calc(100vh-67px)]`}
+        className={`fixed left-0 top-[68px] bg-[#006EC2] transition-all duration-300
+        ${mainMenuOpen ? "w-[220px]" : "w-[70px]"}
+        h-[calc(100vh-68px)]`}
       >
+        {/* Sidebar layout with scrollable menu and fixed bottom section */}
+        <div className="flex flex-col justify-between h-full px-3 pt-4 pb-4">
 
-       <div className="flex flex-col h-full">
-  <div className="flex-1 overflow-y-auto sidebar-scroll px-4 pt-2">
-          <ul className="mt-3 space-y-1">
-            <Home mainMenuOpen={mainMenuOpen} />
+          {/* Scrollable navigation menu */}
+          <div className="flex-1 overflow-y-auto sidebar-scroll">
+            <ul className="space-y-0.5">
 
-            <Dashboard mainMenuOpen={mainMenuOpen} />
+              {/* Main navigation links */}
+              <Home mainMenuOpen={mainMenuOpen} />
+              <Dashboard mainMenuOpen={mainMenuOpen} />
 
-            {mainMenuOpen && (
-              <h1 className="text-sm text-white">Communication</h1>
-            )}
+              {/* Communication section */}
+              {mainMenuOpen && (
+                <h1 className="text-sm text-white mt-2 mb-2 px-3">
+                  Communication
+                </h1>
+              )}
 
-            <CampaignsDropdown
-              mainMenuOpen={mainMenuOpen}
-              activeDropdown={activeDropdown}
-              setActiveDropdown={setActiveDropdown}
-            />
+              {/* Communication menu items */}
+              <CampaignsDropdown
+                mainMenuOpen={mainMenuOpen}
+                activeDropdown={activeDropdown}
+                setActiveDropdown={setActiveDropdown}
+              />
 
-            <Tools
-              mainMenuOpen={mainMenuOpen}
-              activeDropdown={activeDropdown}
-              setActiveDropdown={setActiveDropdown}
-            />
+              <Tools
+                mainMenuOpen={mainMenuOpen}
+                activeDropdown={activeDropdown}
+                setActiveDropdown={setActiveDropdown}
+              />
 
-            <Livechat mainMenuOpen={mainMenuOpen} />
+              <Livechat mainMenuOpen={mainMenuOpen} />
 
-            {mainMenuOpen && (
-              <h1 className="text-sm text-white">Manage</h1>
-            )}
+              {/* Management section */}
+              {mainMenuOpen && (
+                <h1 className="text-sm text-white mt-2 mb-2 px-2">
+                  Manage
+                </h1>
+              )}
 
-            <Numbers
-              mainMenuOpen={mainMenuOpen}
-              activeDropdown={activeDropdown}
-              setActiveDropdown={setActiveDropdown}
-            />
+              {/* Management menu items */}
+              <Numbers
+                mainMenuOpen={mainMenuOpen}
+                activeDropdown={activeDropdown}
+                setActiveDropdown={setActiveDropdown}
+              />
 
-            <Contacts
-              mainMenuOpen={mainMenuOpen}
-              activeDropdown={activeDropdown}
-              setActiveDropdown={setActiveDropdown}
-            />
+              <Contacts
+                mainMenuOpen={mainMenuOpen}
+                activeDropdown={activeDropdown}
+                setActiveDropdown={setActiveDropdown}
+              />
 
-            <Reports
-              mainMenuOpen={mainMenuOpen}
-              activeDropdown={activeDropdown}
-              setActiveDropdown={setActiveDropdown}
-            />
+              <Reports
+                mainMenuOpen={mainMenuOpen}
+                activeDropdown={activeDropdown}
+                setActiveDropdown={setActiveDropdown}
+              />
 
-            <Api
-              mainMenuOpen={mainMenuOpen}
-              activeDropdown={activeDropdown}
-              setActiveDropdown={setActiveDropdown}
-            />
+              <Api
+                mainMenuOpen={mainMenuOpen}
+                activeDropdown={activeDropdown}
+                setActiveDropdown={setActiveDropdown}
+              />
             </ul>
-            </div>
-         <div className="px-4 py-3 shrink-0">
+          </div>
 
-
+          {/* Fixed bottom section */}
+          <div>
             {mainMenuOpen && (
-              <h1 className="text-sm text-white">Personal</h1>
+              <h1 className="text-sm text-white mt-2 mb-2 px-2">
+                Personal
+              </h1>
             )}
 
-            <div className="flex items-start gap-2">
+            {/* Credits information */}
+            <div className="flex items-start gap-3 px-2">
               <img
                 src="/navbar/coins.svg"
                 alt="coins-logo"
@@ -91,11 +108,12 @@ const MainContent = ({ mainMenuOpen }) => {
               />
 
               {mainMenuOpen && (
-                <div className="flex flex-col">
-                  <h1 className="text-base text-white">Credits</h1>
-                  <h2 className="text-base text-white">
+                <div>
+                  <h1 className="text-sm text-white">Credits</h1>
+
+                  <span className="block text-sm text-white mt-1">
                     USD 86,682.27
-                  </h2>
+                  </span>
                 </div>
               )}
             </div>
@@ -103,9 +121,10 @@ const MainContent = ({ mainMenuOpen }) => {
         </div>
       </div>
 
+      {/* Main page content rendered by React Router */}
       <div
-        className={`flex-1 min-w-0 transition-all duration-300 pt-[67px]
-        ${mainMenuOpen ? "ml-[240px]" : "ml-[70px]"}`}
+        className={`flex-1 min-w-0 transition-all duration-300 pt-[68px]
+        ${mainMenuOpen ? "ml-[220px]" : "ml-[70px]"}`}
       >
         <Outlet />
       </div>

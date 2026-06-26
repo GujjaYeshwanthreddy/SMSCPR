@@ -3,21 +3,29 @@ import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Numbers = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
+  // Check whether the Numbers dropdown is expanded
   const open = activeDropdown === "numbers";
 
   return (
     <>
+      {/* Numbers parent menu item */}
       <motion.li
         layout
         onClick={() => setActiveDropdown(open ? null : "numbers")}
-        className="flex items-center justify-between gap-2 text-sm px-2 py-1.5 cursor-pointer rounded-md hover:bg-[#005A9C]"
+        className="flex items-center justify-between gap-2 text-sm px-2 py-2 cursor-pointer rounded-lg hover:bg-[#005A9C]"
       >
+        {/* Numbers icon and label */}
         <div className="flex items-center gap-2 text-white">
-          <img src="/navbar/hashtag.svg" alt="hashtag" className="w-5 h-5" />
+          <img
+            src="/navbar/hashtag.svg"
+            alt="hashtag"
+            className="w-5 h-5"
+          />
 
           {mainMenuOpen && <span>Numbers</span>}
         </div>
 
+        {/* Dropdown expand/collapse indicator */}
         {mainMenuOpen && (
           <motion.img
             src="/cheveron-down.svg"
@@ -31,6 +39,8 @@ const Numbers = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
           />
         )}
       </motion.li>
+
+      {/* Animated Numbers submenu */}
       <AnimatePresence initial={false}>
         {open && (
           <motion.ul
@@ -52,13 +62,14 @@ const Numbers = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               },
             }}
             style={{ willChange: "height, opacity" }}
-            className="overflow-hidden ml-2 mt-2 space-y-0.5 text-sm text-white"
+            className="overflow-hidden ml-2 mt-2 space-y-1 text-sm text-white"
           >
+            {/* Virtual Numbers navigation link */}
             <li>
               <NavLink
                 to="/numbers/virtual-numbers"
                 className={({ isActive }) =>
-                  `flex items-center gap-2 px-2 py-1.5 rounded-md ${
+                  `flex items-center gap-2 px-2 py-1.5 rounded-lg ${
                     isActive
                       ? "bg-[#005A9C] text-white"
                       : "text-white hover:bg-[#005A9C]"
@@ -75,11 +86,12 @@ const Numbers = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               </NavLink>
             </li>
 
+            {/* Subscribed navigation link */}
             <li>
               <NavLink
                 to="/numbers/subscribed"
                 className={({ isActive }) =>
-                  `flex items-center gap-2 px-2 py-1.5 rounded-md ${
+                  `flex items-center gap-2 px-2 py-1.5 rounded-lg ${
                     isActive
                       ? "bg-[#005A9C] text-white"
                       : "text-white hover:bg-[#005A9C]"
