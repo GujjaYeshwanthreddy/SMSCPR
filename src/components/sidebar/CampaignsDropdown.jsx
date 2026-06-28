@@ -57,7 +57,7 @@ const CampaignsDropdown = ({
       <AnimatePresence initial={false}>
         {open && (
           <motion.ul
-            layout
+
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -75,7 +75,7 @@ const CampaignsDropdown = ({
               },
             }}
             style={{ willChange: "height, opacity" }}
-            className="overflow-hidden space-y-1 text-sm text-white"
+            className="overflow-hidden space-y-1 text-base text-white"
           >
             <li>
               <NavLink

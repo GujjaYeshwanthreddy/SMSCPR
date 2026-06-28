@@ -11,7 +11,7 @@ const Api = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
   return (
     <>
       <motion.li
-        layout
+
         onClick={() =>
           setActiveDropdown(activeDropdown === "api" ? null : "api")
         }
@@ -38,7 +38,7 @@ const Api = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
             className="w-5 h-5"
             animate={{ rotate: open ? 180 : 0 }}
             transition={{
-              duration: 0.2,
+              duration: 0.25,
               ease: "easeInOut",
             }}
           />
@@ -62,7 +62,7 @@ const Api = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               },
             }}
             style={{ willChange: "height, opacity" }}
-            className="overflow-hidden mt-1 space-y-1 text-sm text-white"
+            className="overflow-hidden mt-1 space-y-1 text-base text-white"
           >
             <li>
               <NavLink

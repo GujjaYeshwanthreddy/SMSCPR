@@ -43,7 +43,7 @@ const Numbers = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
             className="w-5 h-5"
             animate={{ rotate: open ? 180 : 0 }}
             transition={{
-              duration: 0.2,
+              duration: 0.25,
               ease: "easeInOut",
             }}
           />
@@ -53,7 +53,7 @@ const Numbers = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
       <AnimatePresence initial={false}>
         {open && (
           <motion.ul
-            layout
+
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -71,7 +71,7 @@ const Numbers = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               },
             }}
             style={{ willChange: "height, opacity" }}
-            className="overflow-hidden space-y-1 text-sm text-white"
+            className="overflow-hidden space-y-1 text-base text-white"
           >
             <li>
               <NavLink

@@ -15,20 +15,20 @@ const MainContent = ({ mainMenuOpen }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   return (
-    <div className="flex h-screen overflow-hidden">
+   <div className="flex h-screen">
       <div
-        className={`fixed left-0 top-[68px] bg-[#006EC2] transition-all duration-300
-        ${mainMenuOpen ? "w-[220px]" : "w-[70px]"}
-        h-[calc(100vh-68px)]`}
+        className={`fixed left-0 top-[78px] bg-[#006EC2] transition-all duration-300
+        ${mainMenuOpen ? "w-[240px]" : "w-[70px]"}
+        h-[calc(100vh-78px)]`}
       >
-        <div className="flex flex-col justify-between h-full px-3 pt-4 pb-4">
-          <div className="flex-1 overflow-y-auto sidebar-scroll">
+        <div className="flex flex-col justify-between h-full px-3 pt-2 pb-7">
+          <div className="flex-1 text-2xl overflow-y-auto sidebar-scroll">
             <ul className="space-y-1">
               <Home mainMenuOpen={mainMenuOpen} />
               <Dashboard mainMenuOpen={mainMenuOpen} />
 
               {mainMenuOpen && (
-                <h1 className="text-sm text-white mt-1 mb-2 px-3">
+                <h1 className="text-sm text-white mt-2 mb-2 px-3">
                   Communication
                 </h1>
               )}
@@ -48,7 +48,7 @@ const MainContent = ({ mainMenuOpen }) => {
               <Livechat mainMenuOpen={mainMenuOpen} />
 
               {mainMenuOpen && (
-                <h1 className="text-sm text-white mt-1 mb-2 px-3">Manage</h1>
+                <h1 className="text-sm text-white mt-2 mb-2 px-3">Manage</h1>
               )}
 
               <Numbers
@@ -79,11 +79,11 @@ const MainContent = ({ mainMenuOpen }) => {
 
           <div>
             {mainMenuOpen && (
-              <h1 className="text-sm text-white mt-1 mb-1 px-2">Personal</h1>
+              <h1 className="text-sm text-white mt-2 mb-2 px-2">Personal</h1>
             )}
 
-            <div className="px-2">
-              <div className="flex items-center gap-2">
+            <div className="px-3">
+              <div className="flex items-center gap-1">
                 <img
                   src="/navbar/coins.svg"
                   alt="coins-logo"
@@ -91,12 +91,12 @@ const MainContent = ({ mainMenuOpen }) => {
                 />
 
                 {mainMenuOpen && (
-                  <h1 className="text-sm text-white">Credits</h1>
+                  <h1 className="text-base text-white mt-2 pl-7">Credits</h1>
                 )}
               </div>
 
               {mainMenuOpen && (
-                <span className="block text-sm text-white mt-1">
+                <span className="block text-base text-white mt-2 pl-7">
                   USD 86,682.27
                 </span>
               )}
@@ -106,8 +106,8 @@ const MainContent = ({ mainMenuOpen }) => {
       </div>
 
       <div
-        className={`flex-1 min-w-0 transition-all duration-300 pt-[68px]
-        ${mainMenuOpen ? "ml-[220px]" : "ml-[70px]"}`}
+  className={`flex-1 min-w-0 transition-all duration-300 pt-[78px] overflow-y-auto h-screen
+        ${mainMenuOpen ? "ml-[240px]" : "ml-[70px]"}`}
       >
         <Outlet />
       </div>

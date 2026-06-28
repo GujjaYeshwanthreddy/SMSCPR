@@ -18,7 +18,7 @@ const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
   return (
     <>
       <motion.li
-        layout
+
         onClick={() => setActiveDropdown(open ? null : "tools")}
         className={`flex items-center justify-between px-2 py-2 rounded-lg text-sm cursor-pointer transition-colors duration-200 ${
           isToolsActive
@@ -55,7 +55,7 @@ const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
             exit={{ height: 0, opacity: 0 }}
             transition={{
               height: {
-                duration: 0.3,
+                duration: 0.25,
                 ease: "easeInOut",
               },
               opacity: {
@@ -63,7 +63,7 @@ const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               },
             }}
             style={{ willChange: "height, opacity" }}
-            className="overflow-hidden space-y-1 text-sm text-white"
+            className="overflow-hidden space-y-1 text-base text-white"
           >
             <li>
               <NavLink

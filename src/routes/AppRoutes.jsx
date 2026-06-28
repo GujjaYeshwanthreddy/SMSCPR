@@ -30,6 +30,7 @@ import InboxPage from "../Pages/Reports/InboxPage";
 import HttpApiPage from "../Pages/Api/HttpApiPage";
 
 import LivechatPage from "../Pages/LiveChat/LivechatPage";
+import BeginRegistrationPage from "../Pages/Home/BeginRegistrationPage";
 
 const AppRoutes = ({ mainMenuOpen }) => {
   return (
@@ -92,6 +93,10 @@ const AppRoutes = ({ mainMenuOpen }) => {
 
 
         <Route path="livechat" element={<LivechatPage />} />
+        <Route
+  path="begin-registration"
+  element={<BeginRegistrationPage />}
+/>
       </Route>
     </Routes>
   );

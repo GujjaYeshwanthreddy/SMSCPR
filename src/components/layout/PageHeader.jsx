@@ -2,7 +2,7 @@ import React from "react";
 
 const PageHeader = ({ items }) => {
   return (
-    <div className="w-full h-[52px] bg-[#069EDC] flex items-center gap-4 px-6">
+    <div className="w-full h-[50px] bg-[#069EDC] flex items-center gap-4 px-6">
       {items.map((item, index) => (
         <React.Fragment key={index}>
           <div className="flex items-center gap-3">
@@ -13,7 +13,7 @@ const PageHeader = ({ items }) => {
             />
 
             {item.label && (
-              <span className="text-white text-sm">{item.label}</span>
+              <span className="text-white text-base">{item.label}</span>
             )}
           </div>
 
