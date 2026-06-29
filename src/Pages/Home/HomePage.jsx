@@ -6,7 +6,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-[#F3F3F3] min-h-screen">
-      {/* Header */}
+
       <PageHeader
         items={[
           {
@@ -15,9 +15,9 @@ const HomePage = () => {
         ]}
       />
 
-      {/* Main Section */}
+
       <div className="m-6">
-        {/* Main Card */}
+
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-13">
           {/* Close Button */}
           <div className="flex justify-end">
@@ -26,7 +26,7 @@ const HomePage = () => {
             </button>
           </div>
 
-          {/* Heading */}
+
           <div className="text-center pt-31">
             <h1 className="text-4xl font-bold text-[#2F3A4F]">
               Get started as a registered sender
@@ -39,14 +39,13 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Sub Heading */}
           <h2 className="text-center text-2xl font-semibold text-[#2F3A4F] mt-14">
             Here's what you'll need:
           </h2>
 
-          {/* Info Cards */}
+
           <div className="grid grid-cols-3 gap-6 mt-10">
-            {/* Card 1 */}
+
             <div className="bg-[#FAFAFA] rounded-2xl p-7 flex gap-5 border border-gray-100">
               <div className="border-l-4 border-[#0EA5E9] pl-5 flex items-center">
                 <h1 className="text-6xl font-bold text-[#0EA5E9]">1</h1>
@@ -64,7 +63,7 @@ const HomePage = () => {
               </div>
             </div>
 
-            {/* Card 2 */}
+
             <div className="bg-[#FAFAFA] rounded-2xl p-7 flex gap-5 border border-gray-100">
               <div className="border-l-4 border-[#06B6D4] pl-5 flex items-center">
                 <h1 className="text-6xl font-bold text-[#06B6D4]">2</h1>
@@ -82,7 +81,7 @@ const HomePage = () => {
               </div>
             </div>
 
-            {/* Card 3 */}
+
             <div className="bg-[#FAFAFA] rounded-2xl p-7 flex gap-5 border border-gray-100">
               <div className="border-l-4 border-[#0F4C81] pl-5 flex items-center">
                 <h1 className="text-6xl font-bold text-[#0F4C81]">3</h1>
@@ -101,7 +100,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* Bottom Buttons */}
+
           <div className="flex justify-center items-center gap-8 mt-14">
             <button className="text-[#0F4C81] font-semibold text-xl">
               Set up later

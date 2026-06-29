@@ -20,7 +20,7 @@ const Reports = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
       <motion.li
         layout
         onClick={() => setActiveDropdown(open ? null : "reports")}
-        className={`flex items-center justify-between gap-2 px-2 py-2 cursor-pointer text-sm rounded-lg transition-colors ${
+        className={`flex items-center justify-between gap-2 px-2 py-2 cursor-pointer text-base rounded-lg transition-colors ${
           isReportsActive
             ? "bg-[#005A9C] text-white"
             : "text-white hover:bg-[#005A9C]"
@@ -71,7 +71,7 @@ const Reports = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               },
             }}
             style={{ willChange: "height, opacity" }}
-            className="overflow-hidden  space-y-1 text-base text-white"
+            className="overflow-hidden  space-y-1 text-sm text-white"
           >
             <li>
               <NavLink

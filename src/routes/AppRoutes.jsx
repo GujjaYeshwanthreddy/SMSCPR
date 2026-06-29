@@ -34,14 +34,11 @@ import BeginRegistrationPage from "../Pages/Home/BeginRegistrationPage";
 
 const AppRoutes = ({ mainMenuOpen }) => {
   return (
-
     <Routes>
-
       <Route path="/" element={<MainContent mainMenuOpen={mainMenuOpen} />}>
         {/* Home routes */}
         <Route index element={<HomePage />} />
         <Route path="dashboard" element={<DashboardPage />} />
-
 
         <Route path="campaigns/send-message" element={<SendMessagePage />} />
         <Route
@@ -71,16 +68,9 @@ const AppRoutes = ({ mainMenuOpen }) => {
         />
         <Route path="numbers/subscribed" element={<SubscribedPage />} />
 
-
-        <Route
-          path="contacts/contact-groups"
-          element={<ContactGroupsPage />}
-        />
+        <Route path="contacts/contact-groups" element={<ContactGroupsPage />} />
         <Route path="contacts/segments" element={<SegmentsPage />} />
-        <Route
-          path="contacts/custom-fields"
-          element={<CustomFieldsPage />}
-        />
+        <Route path="contacts/custom-fields" element={<CustomFieldsPage />} />
 
         <Route
           path="reports/campaign-status"
@@ -88,15 +78,10 @@ const AppRoutes = ({ mainMenuOpen }) => {
         />
         <Route path="reports/inbox" element={<InboxPage />} />
 
-
         <Route path="api/http-api" element={<HttpApiPage />} />
 
-
         <Route path="livechat" element={<LivechatPage />} />
-        <Route
-  path="begin-registration"
-  element={<BeginRegistrationPage />}
-/>
+        <Route path="begin-registration" element={<BeginRegistrationPage />} />
       </Route>
     </Routes>
   );

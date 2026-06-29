@@ -22,13 +22,13 @@ const MainContent = ({ mainMenuOpen }) => {
         h-[calc(100vh-78px)]`}
       >
         <div className="flex flex-col justify-between h-full px-3 pt-2 pb-7">
-          <div className="flex-1 text-2xl overflow-y-auto sidebar-scroll">
+          <div className="flex-1 text-sm overflow-y-auto sidebar-scroll">
             <ul className="space-y-1">
               <Home mainMenuOpen={mainMenuOpen} />
               <Dashboard mainMenuOpen={mainMenuOpen} />
 
               {mainMenuOpen && (
-                <h1 className="text-sm text-white mt-2 mb-2 px-3">
+                <h1 className="text-xs text-white mt-1 mb-1 px-3">
                   Communication
                 </h1>
               )}
@@ -48,7 +48,7 @@ const MainContent = ({ mainMenuOpen }) => {
               <Livechat mainMenuOpen={mainMenuOpen} />
 
               {mainMenuOpen && (
-                <h1 className="text-sm text-white mt-2 mb-2 px-3">Manage</h1>
+                <h1 className="text-xs text-white mt-1 mb-1 px-3">Manage</h1>
               )}
 
               <Numbers
@@ -79,11 +79,11 @@ const MainContent = ({ mainMenuOpen }) => {
 
           <div>
             {mainMenuOpen && (
-              <h1 className="text-sm text-white mt-2 mb-2 px-2">Personal</h1>
+              <h1 className="text-xs text-white mt-1 mb- px-3">Personal</h1>
             )}
 
-            <div className="px-3">
-              <div className="flex items-center gap-1">
+            <div className="px-2">
+              <div className="flex items-center gap-0.5">
                 <img
                   src="/navbar/coins.svg"
                   alt="coins-logo"
@@ -91,12 +91,12 @@ const MainContent = ({ mainMenuOpen }) => {
                 />
 
                 {mainMenuOpen && (
-                  <h1 className="text-base text-white mt-2 pl-7">Credits</h1>
+                  <h1 className="text-sm text-white  pl-3">Credits</h1>
                 )}
               </div>
 
               {mainMenuOpen && (
-                <span className="block text-base text-white mt-2 pl-7">
+                <span className="block text-sm text-white mt-2 pl-3">
                   USD 86,682.27
                 </span>
               )}

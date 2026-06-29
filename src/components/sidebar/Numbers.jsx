@@ -71,7 +71,7 @@ const Numbers = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
               },
             }}
             style={{ willChange: "height, opacity" }}
-            className="overflow-hidden space-y-1 text-base text-white"
+            className="overflow-hidden space-y-1 text-sm text-white"
           >
             <li>
               <NavLink
