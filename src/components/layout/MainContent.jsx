@@ -79,7 +79,7 @@ const MainContent = ({ mainMenuOpen }) => {
 
           <div>
             {mainMenuOpen && (
-              <h1 className="text-xs text-white mt-1 mb- px-3">Personal</h1>
+              <h1 className="text-xs text-white mt-1 mb-1 px-3">Personal</h1>
             )}
 
             <div className="px-2">

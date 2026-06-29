@@ -1,8 +1,10 @@
 import React from "react";
 import { FaTimes, FaQuestionCircle } from "react-icons/fa";
 import PageHeader from "../../components/layout/PageHeader";
+import { useNavigate } from "react-router-dom";
 
 const BeginRegistrationPage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <PageHeader
@@ -15,14 +17,14 @@ const BeginRegistrationPage = () => {
 
       <div className="min-h-[calc(100vh-120px)] bg-[#F3F4F6] p-5">
         <div className="relative bg-white rounded-2xl border border-gray-200 shadow-sm min-h-[520px]">
-
-
-          <button className="absolute top-8 right-8 text-2xl text-gray-700 hover:text-black">
-            <FaTimes />
+          <button
+            onClick={() => navigate("/")}
+            className="absolute top-8 right-8 text-3xl text-gray-500  cursor-pointer"
+          >
+            &times;
           </button>
 
           <div className="flex flex-col items-center justify-center pt-32">
-
             <h1 className="text-[28px] font-semibold text-[#243B5A]">
               Verify your business or organization
             </h1>
@@ -34,7 +36,6 @@ const BeginRegistrationPage = () => {
             </p>
 
             <div className="mt-14 w-full max-w-xl">
-
               <label className="flex items-center gap-2 text-[18px] font-semibold text-[#243B5A]">
                 Enter your Tax ID/EIN
                 <FaQuestionCircle className="text-[#0A74D1]" />
@@ -47,18 +48,15 @@ const BeginRegistrationPage = () => {
               />
 
               <div className="flex items-center justify-center gap-8 mt-14">
-
-                <button className="text-[#0A4B84] font-semibold text-xl hover:underline">
+                <button className="text-[#0A4B84] font-semibold text-xl cursor-pointer hover:underline">
                   I don't have a Tax ID/EIN
                 </button>
 
-                <button className="bg-[#0A4B84] hover:bg-[#083B69] text-white px-8 py-3 rounded-lg text-xl font-medium">
+                <button className="bg-[#0A4B84] hover:bg-[#083B69] text-white cursor-pointer px-8 py-3 rounded-lg text-xl font-medium">
                   Continue
                 </button>
-
               </div>
             </div>
-
           </div>
         </div>
       </div>
