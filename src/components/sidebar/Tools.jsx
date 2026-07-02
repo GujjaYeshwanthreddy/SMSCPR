@@ -20,7 +20,7 @@ const Tools = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
       <motion.li
 
         onClick={() => setActiveDropdown(open ? null : "tools")}
-        className={`flex items-center justify-between px-2 py-2 rounded-lg text-base cursor-pointer transition-colors duration-200 ${
+        className={`flex items-center justify-between px-2 py-2 rounded-lg text-sm cursor-pointer transition-colors duration-200 ${
           isToolsActive
             ? "bg-[#005A9C] text-white"
             : "text-white hover:bg-[#005A9C]"

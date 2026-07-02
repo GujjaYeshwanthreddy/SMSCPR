@@ -15,7 +15,7 @@ const Api = ({ mainMenuOpen, activeDropdown, setActiveDropdown }) => {
         onClick={() =>
           setActiveDropdown(activeDropdown === "api" ? null : "api")
         }
-        className={`flex items-center justify-between gap-2 cursor-pointer text-base px-2 py-2 rounded-lg transition-colors ${
+        className={`flex items-center justify-between gap-2 cursor-pointer text-sm px-2 py-2 rounded-lg transition-colors ${
           isApiActive
             ? "bg-[#005A9C] text-white"
             : "text-white hover:bg-[#005A9C]"
